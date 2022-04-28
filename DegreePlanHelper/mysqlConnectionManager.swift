@@ -22,6 +22,7 @@ class mysqlConnectionManager{
         let coordinator = MySQLStoreCoordinator(configuration: user)
         coordinator.encoding = .UTF8MB4
         coordinator.connect()
+        print("try commit")
         
         
 //        let user = MySQLConfiguration(userName: "root", password: "root", serverName: "localhost", dbName: "dbname", port: 3306, socket: "/mysql/mysql.sock")

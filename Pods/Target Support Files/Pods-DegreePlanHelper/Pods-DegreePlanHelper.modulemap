@@ -1,0 +1,6 @@
+framework module Pods_DegreePlanHelper {
+  umbrella header "Pods-DegreePlanHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}
