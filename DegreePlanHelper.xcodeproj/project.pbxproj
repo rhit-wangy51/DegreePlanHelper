@@ -13,6 +13,8 @@
 		3BF158D728186E68002198E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF158D528186E68002198E6 /* Main.storyboard */; };
 		3BF158D928186E69002198E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF158D828186E69002198E6 /* Assets.xcassets */; };
 		3BF158DC28186E69002198E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF158DA28186E69002198E6 /* LaunchScreen.storyboard */; };
+		3BF158E428186F94002198E6 /* mysqlConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF158E328186F94002198E6 /* mysqlConnectionManager.swift */; };
+		B9D7D69D5C70379CAAF7C7A2 /* Pods_DegreePlanHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79583BED55E294903DB1A68A /* Pods_DegreePlanHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		3BF158D828186E69002198E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BF158DB28186E69002198E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BF158DD28186E69002198E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BF158E328186F94002198E6 /* mysqlConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mysqlConnectionManager.swift; sourceTree = "<group>"; };
+		79583BED55E294903DB1A68A /* Pods_DegreePlanHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DegreePlanHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F885A4387D2448DFB887411 /* Pods-DegreePlanHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DegreePlanHelper.release.xcconfig"; path = "Target Support Files/Pods-DegreePlanHelper/Pods-DegreePlanHelper.release.xcconfig"; sourceTree = "<group>"; };
+		DB7DDDF41BA3A4EDC32D80B5 /* Pods-DegreePlanHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DegreePlanHelper.debug.xcconfig"; path = "Target Support Files/Pods-DegreePlanHelper/Pods-DegreePlanHelper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D7D69D5C70379CAAF7C7A2 /* Pods_DegreePlanHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				3BF158CE28186E68002198E6 /* DegreePlanHelper */,
 				3BF158CD28186E68002198E6 /* Products */,
+				880A466A4E351E94C9B25A9B /* Pods */,
+				E42F3ACD99A3A39EDB91861E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +72,26 @@
 				3BF158D828186E69002198E6 /* Assets.xcassets */,
 				3BF158DA28186E69002198E6 /* LaunchScreen.storyboard */,
 				3BF158DD28186E69002198E6 /* Info.plist */,
+				3BF158E328186F94002198E6 /* mysqlConnectionManager.swift */,
 			);
 			path = DegreePlanHelper;
+			sourceTree = "<group>";
+		};
+		880A466A4E351E94C9B25A9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB7DDDF41BA3A4EDC32D80B5 /* Pods-DegreePlanHelper.debug.xcconfig */,
+				9F885A4387D2448DFB887411 /* Pods-DegreePlanHelper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E42F3ACD99A3A39EDB91861E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79583BED55E294903DB1A68A /* Pods_DegreePlanHelper.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BF158E028186E69002198E6 /* Build configuration list for PBXNativeTarget "DegreePlanHelper" */;
 			buildPhases = (
+				67210805D4BDFE99718473D2 /* [CP] Check Pods Manifest.lock */,
 				3BF158C828186E68002198E6 /* Sources */,
 				3BF158C928186E68002198E6 /* Frameworks */,
 				3BF158CA28186E68002198E6 /* Resources */,
+				2EF0E1A6DE96F9C3DB2C5795 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +162,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2EF0E1A6DE96F9C3DB2C5795 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DegreePlanHelper/Pods-DegreePlanHelper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DegreePlanHelper/Pods-DegreePlanHelper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DegreePlanHelper/Pods-DegreePlanHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67210805D4BDFE99718473D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DegreePlanHelper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3BF158C828186E68002198E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3BF158D428186E68002198E6 /* ViewController.swift in Sources */,
+				3BF158E428186F94002198E6 /* mysqlConnectionManager.swift in Sources */,
 				3BF158D028186E68002198E6 /* AppDelegate.swift in Sources */,
 				3BF158D228186E68002198E6 /* SceneDelegate.swift in Sources */,
 			);
@@ -284,6 +356,7 @@
 		};
 		3BF158E128186E69002198E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB7DDDF41BA3A4EDC32D80B5 /* Pods-DegreePlanHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +384,7 @@
 		};
 		3BF158E228186E69002198E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F885A4387D2448DFB887411 /* Pods-DegreePlanHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
