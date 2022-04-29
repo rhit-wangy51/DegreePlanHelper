@@ -6,38 +6,52 @@
 //
 
 import Foundation
-import OHMySQL
+//import OHMySQL
+import SQLClient
 
 class mysqlConnectionManager{
     
     
     func connectToMysql(){
-        let user = MySQLConfiguration(user: "root",
-                                      password: "root",
-                                      serverName: "localhost",
-                                      dbName: "dbname",
-                                      port: 3306,
-                                      socket: "/mysql/mysql.sock")
+        let client = SQLClient.sharedInstance()
+//        client?.connect(host: , username: <#T##String#>, password: <#T##String#>, database: <#T##String?#>, completion: { error in
+//            print("any")
+//        })
+        
+        
+        client?.connect("titan.csse.rose-hulman.edu", username: "wangy51", password: "jjdynZx760!", database: "DegreePlanHelper")
+        print("connected")
+        client?.disconnect()
+        
+//        let client = SQLClient.sharedInstance()!
+//                   client.delegate = self
+//                   client.connect("ServerNameOrIP", username: "cool", password: "cool", database: "database") { success in
+//                   client.execute("SELECT * FROM table", completion: { (_ results: ([Any]?)) in
+//                    for table in results as! [[[String:AnyObject]]] {
+//                        for row in table {
+//                            for (columnName, value) in row {
+//                                print("\(columnName) = \(value)")
+//                            }
+//                        }
+//                    }
+//                    client.disconnect()
+//                })
+//            }
 
-        let coordinator = MySQLStoreCoordinator(configuration: user)
-        coordinator.encoding = .UTF8MB4
-        coordinator.connect()
-        print("try commit")
-        print("?")
-        
-        
-//        let user = MySQLConfiguration(userName: "root", password: "root", serverName: "localhost", dbName: "dbname", port: 3306, socket: "/mysql/mysql.sock")
-//        let coordinator = MySQLStoreCoordinator(user: user!)
-//        coordinator.encoding = .UTF8MB4
-//        coordinator.connect()
-//
-//        OHMySQLConfiguration *config = [[OHMySQLConfiguration alloc] initWithUserName:@"root"
-//                                                                             password:@"root"
-//                                                                           serverName:@"localhost"
-//                                                                               dbName:@"dbname"
-//                                                                                 port:3306
-//                                                                               socket:@"/mysql/mysql.sock"];
-//        OHMySQLStoreCoordinator *coordinator = [[OHMySQLStoreCoordinator alloc] initWithUser:config];
-//        [coordinator connect];
+//        SQLClient.client = [SQLClient: sharedInstance];
+//        [clien.connect:@"server\instance:port" username:@"user" password:@"pass" database:@"db" completion:^(BOOL success) {
+//            if (success) {
+//              [client execute:@"SELECT * FROM Users" completion:^(NSArray* results) {
+//                for (NSArray* table in results) {
+//                  for (NSDictionary* row in table) {
+//                    for (NSString* column in row) {
+//                      NSLog(@"%@=%@", column, row[column]);
+//                    }
+//                  }
+//                }
+//                [client disconnect];
+//              }];
+//            }
+//        }];
     }
 }

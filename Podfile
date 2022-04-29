@@ -5,7 +5,8 @@ use_frameworks!
 target 'DegreePlanHelper' do
   # Comment the next line if you don't want to use dynamic frameworks
   #use_frameworks!
-  pod 'OHMySQL'
+  #pod 'OHMySQL'
+  pod 'SQLClient', '~> 1.0.0'
 #path 
 #=> 'https://github.com/oleghnidets/OHMySQL.git'
   # Pods for DegreePlanHelper
